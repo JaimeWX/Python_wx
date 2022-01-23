@@ -1,0 +1,34 @@
+from random import randint
+
+def play():
+    random_int = randint(0,100)
+
+    while True:
+
+        user_guess = int(input("What number did we guess (0-100)?"))
+
+        if user_guess == randint:
+            print(f"You found the number ({random_int}). Congrats!")
+            break
+
+        if user_guess < random_int:
+            print("Your number is less than the number we guessed.")
+            continue
+
+        if user_guess > random_int:
+            print("Your number is more than the number we guessed.")
+            continue
+
+if __name__ == '__main__':
+    play()
+
+
+    错误原因：程序没有打印出祝贺信息和显示退出按钮，而是重新开始了。
+    解决办法：
+        step1 断点S8
+        step2 Debug guess_name + 记录Debug窗口显示的数字
+        step3 f8 + 转入Console窗口输入该数字并enter
+        step4 f8（程序调到S14，期望结果应在S11，由此可推断S10为False。分析得应该对比用户猜测的数字和 random_int，但此处对比的是randint（从 random 包导入的函数））
+        step5 将S10中的randint 改为 random_int，重新执行step1-4，程序跳入S11.
+
+
