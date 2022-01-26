@@ -1,0 +1,1 @@
+required_states = set(["mt","wa","or","id","nv","ut","ca","az"])
