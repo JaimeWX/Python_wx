@@ -1,0 +1,2 @@
+bug1
+    贪婪算法中第三个required_states从其他文件中调用时会报错。目前的解决办法是在def select_stations() 中创建一个局部变量rs，令rs = required_stastes. 
