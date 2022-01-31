@@ -1,0 +1,8 @@
+在当前文件中搜索代码段: Cmd+F
+在整个项目中搜索代码段: Cmd+Shift+F
+搜索类: Cmd+O
+搜索文件: Cmd+Shift+O 
+搜索全部：按两次 Shift 键
+前往变量的声明：Cmd + 单击变量
+查看近期更改：在主菜单中点击 View → Recent Changes
+查看近期文件：在主菜单中点击 View → Recent Files
