@@ -17,3 +17,17 @@ add_items("beef","4.2")
 for key,value in book.items():
     print(key + str(value))
 add_items("beef","4.2")
+
+# cache
+
+cache = {} # another way to create dictionary
+def get_page(url):
+    if cache.get(url):
+        return cache[url]
+    else:
+        data = get_data_from_server(url)
+        cache[url] = data
+        return data
+#bullshit
+def get_data_from_server(url):
+    print("happy new year")
